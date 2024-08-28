@@ -1,0 +1,64 @@
+@media only screen {
+
+	body { font-family: "Roboto", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 1em; margin: 0; padding:0; width:100%; }
+
+	h1 { font-weight: bold; font-size: 2em; letter-spacing: -1px;} 
+	h3 { font-weight: bold; margin:0; padding:1rem 0 0 0;}
+	a, a:visited {text-decoration: none; }
+	a:hover { text-decoration: underline; }
+	textarea, input { outline: none; }
+	select { cursor:pointer; }
+	.clear { clear:both; }
+	.closed { display:none; }
+	
+	.title { margin-right:1rem;}
+ 	#listview{background:#fff; }
+	#datalist {}
+	.listwrap, .footer { padding:1rem;}
+	.details { z-index:10000; padding: 1rem 1rem 0 1rem; background:#f5f5f5;}
+	.sticky { z-index:10000; position:sticky; top:0; padding:1rem; background:#f5f5f5; border-bottom:1px solid #ccc;}
+	
+	.details h3, .details p { display:inline-block; margin-bottom:0;}
+	.dataviewer ul {list-style:none; margin:0.5rem 0; padding:0;}
+	.dataviewer ul.list {margin-left:-0.5rem;}
+	.dataviewer ul li.entry { position:relative; overflow:hidden; border:1px solid #ccc; float:left; display:block; width:calc(20% - 1rem - 2px); margin:0.5rem; border-radius:0.25rem; height:31rem;}
+
+	.dataviewer ul li.entry div.top { z-index:2000; background:#4d34db; color:#fff; padding:1.5rem 1rem 1rem 1rem; margin:-0.5rem; font-size:1rem;}
+	.dataviewer ul li.entry div.bottom { z-index:2000; position:absolute; bottom:0; width:100%; background:#f5f5f5; color:#555; }
+	.dataviewer ul li.entry div.bottom .tags {
+		padding:0.5rem 1rem; font-size:0.8rem;
+	}
+	.dataviewer ul li.entry div.image { margin-top:0.5rem; overflow:hidden; cursor:pointer; max-height:25rem;}
+	.dataviewer ul li.entry div.image img {width:100%;}
+	.dataviewer ul li.entry .tag { cursor:pointer; text-decoration:underline;}
+	.dataviewer ul li.entry .tag:before {
+		content: "#";
+	}
+	.dataviewer ul.pagination { float:right;}
+	.dataviewer ul.pagination li { padding:0.25rem; display:inline-block; cursor:pointer; border-radius:0.25rem; margin:0 0.25rem;}
+	.dataviewer ul.pagination li.active { background:#efecfa; }
+	
+	.dataviewer ul.sort { float:left;}
+	.dataviewer ul.sort li {padding:0.25rem; display:inline-block; cursor:pointer; border-radius:0.25rem; margin:0 0.25rem; }
+	.dataviewer ul.sort li.active { background:#efecfa; }
+	.dataviewer ul.sort li.active.asc:after { content: '\25B2';}
+	.dataviewer ul.sort li.active.desc:after { content: '\25BC';}
+	
+	#datasearch { border:1px solid #ccc; border-radius:0.25rem; 
+		float:left;
+		font-size: 1rem;
+		padding: .5rem;
+		width:30rem;
+		margin-right:1rem;
+	}
+	#datasearch::placeholder { color:#ccc;}
+	
+}
+
+@media only screen and (max-width: 920px) { 
+	#datasearch {
+		width:100%;
+	}
+	.dataviewer ul li.entry { width:calc(50% - 1rem - 2px); height:22rem;}
+	
+}
